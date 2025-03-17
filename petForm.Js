@@ -32,12 +32,16 @@ form.addEventListener("submit", function (e) {
   // firstNameInput.value <- valore del primo campo
   // lastNameInput.value <- valore del secondo campo
   // phoneInput.value <- valore del terzo campo
+  const petsArray = [];
   const petContact = new Pets(
     petNameInput.value,
     ownerNameInput.value,
     speciesInput.value,
     breedInput.value
   );
+
+  petsArray.push(petContact);
   console.log("CONTATTO SALVATO", petContact);
   form.reset();
+  console.log(petsArray);
 });
